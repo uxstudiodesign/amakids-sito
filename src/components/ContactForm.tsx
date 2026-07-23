@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { Send } from 'lucide-react'
-import { ROUTES, SITE } from '../content/site'
+import { ROUTES, SITE, WEB3FORMS } from '../content/site'
 import { useI18n } from '../i18n'
 import { validaForm, type DatiForm, type ErroriForm } from '../utils/validazioneForm'
 
@@ -43,20 +43,27 @@ export default function ContactForm({ oggettoIniziale }: ContactFormProps) {
     if (Object.keys(nuoviErrori).length > 0) return
 
     const formData = new FormData(event.currentTarget)
-    formData.set('form-name', 'contatti')
-    const corpo = new URLSearchParams()
-    formData.forEach((valore, chiave) => {
-      if (typeof valore === 'string') corpo.append(chiave, valore)
-    })
+    const honeypot = String(formData.get('botcheck') ?? '')
 
     setStato('invio')
     try {
-      const risposta = await fetch('/', {
+      const risposta = await fetch(WEB3FORMS.endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: corpo.toString(),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS.accessKey,
+          subject: `[amakidsaps.it] ${dati.oggetto}`,
+          from_name: 'Sito Ama Kids APS',
+          name: dati.nome,
+          email: dati.email,
+          telefono: dati.telefono,
+          oggetto: dati.oggetto,
+          messaggio: dati.messaggio,
+          botcheck: honeypot !== '',
+        }),
       })
-      if (!risposta.ok) {
+      const esito: { success: boolean } = await risposta.json()
+      if (!risposta.ok || !esito.success) {
         throw new Error(`Invio non riuscito (HTTP ${risposta.status})`)
       }
       setStato('successo')
@@ -86,12 +93,11 @@ export default function ContactForm({ oggettoIniziale }: ContactFormProps) {
   }
 
   return (
-    <form name="contatti" method="POST" data-netlify="true" noValidate onSubmit={onSubmit} className="space-y-6">
-      <input type="hidden" name="form-name" value="contatti" />
+    <form name="contatti" method="POST" noValidate onSubmit={onSubmit} className="space-y-6">
       {/* Honeypot anti-spam: nascosto a tutti, screen reader compresi */}
       <p className="hidden" aria-hidden="true">
         <label>
-          {f.honeypot} <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          {f.honeypot} <input name="botcheck" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
 
