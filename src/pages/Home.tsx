@@ -23,9 +23,9 @@ export default function Home() {
           <img
             src="/images/amakids-logo.jpeg"
             alt={t.home.logoAlt}
-            className="h-28 w-28 rounded-full object-cover shadow-lg"
-            width="112"
-            height="112"
+            className="h-40 w-40 rounded-full object-cover shadow-lg"
+            width="160"
+            height="160"
           />
           <h1 className="max-w-3xl text-4xl font-black text-teal-scuro sm:text-5xl">
             {t.home.heroClaim}
