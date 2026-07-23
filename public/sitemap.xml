@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.amakidsaps.it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en"/>
+  </url>
+  <url>
+    <loc>https://www.amakidsaps.it/chi-siamo</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/chi-siamo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en/chi-siamo"/>
+  </url>
+  <url>
+    <loc>https://www.amakidsaps.it/manifesto</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/manifesto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en/manifesto"/>
+  </url>
+  <url>
+    <loc>https://www.amakidsaps.it/diventa-socio</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/diventa-socio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en/diventa-socio"/>
+  </url>
+  <url>
+    <loc>https://www.amakidsaps.it/contatti</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/contatti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en/contatti"/>
+  </url>
+  <url>
+    <loc>https://www.amakidsaps.it/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.amakidsaps.it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amakidsaps.it/en/privacy"/>
+  </url>
+  <url><loc>https://www.amakidsaps.it/en</loc></url>
+  <url><loc>https://www.amakidsaps.it/en/chi-siamo</loc></url>
+  <url><loc>https://www.amakidsaps.it/en/manifesto</loc></url>
+  <url><loc>https://www.amakidsaps.it/en/diventa-socio</loc></url>
+  <url><loc>https://www.amakidsaps.it/en/contatti</loc></url>
+  <url><loc>https://www.amakidsaps.it/en/privacy</loc></url>
+</urlset>
