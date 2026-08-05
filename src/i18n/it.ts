@@ -226,10 +226,14 @@ export const it = {
         testo: "Il Consiglio esamina la domanda e ti comunica l'esito. Da quel momento sei dei nostri.",
       },
     ],
-    moduloHeading: 'Scarica la domanda di ammissione',
+    moduloHeading: 'Documenti per iscriversi',
     moduloTitolo: 'Domanda di Ammissione',
     moduloDesc: "Il modulo ufficiale per richiedere l'iscrizione come socio di Ama Kids APS.",
     moduloEtichetta: 'Scarica il PDF',
+    statutoTitolo: "Statuto dell'Associazione",
+    statutoDesc:
+      "Il regolamento fondamentale di Ama Kids APS: natura giuridica, scopi, diritti e doveri dei soci, organi sociali. Da leggere prima di presentare la domanda.",
+    statutoEtichetta: 'Scarica il PDF',
     quotaLabel: 'Quota associativa:',
     quota:
       "la quota annuale è stabilita dal Consiglio Direttivo — contattaci per conoscere l'importo corrente.",

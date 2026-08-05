@@ -228,10 +228,14 @@ export const en: Dictionary = {
         testo: 'The Board reviews the application and informs you of the outcome. From that moment, you are one of us.',
       },
     ],
-    moduloHeading: 'Download the membership application',
+    moduloHeading: 'Membership documents',
     moduloTitolo: 'Membership Application',
     moduloDesc: 'The official form (in Italian) to apply for membership of Ama Kids APS.',
     moduloEtichetta: 'Download the PDF',
+    statutoTitolo: 'Statute of the Association',
+    statutoDesc:
+      'The fundamental rules of Ama Kids APS (in Italian): legal nature, aims, members’ rights and duties, governing bodies. Read it before applying.',
+    statutoEtichetta: 'Download the PDF',
     quotaLabel: 'Membership fee:',
     quota:
       'the annual fee is set by the Board of Directors — contact us for the current amount.',

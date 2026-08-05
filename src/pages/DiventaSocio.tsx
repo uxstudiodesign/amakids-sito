@@ -69,12 +69,20 @@ export default function DiventaSocio() {
         <h2 id="titolo-modulo" className="sr-only">
           {s.moduloHeading}
         </h2>
-        <DownloadCard
-          titolo={s.moduloTitolo}
-          descrizione={s.moduloDesc}
-          href={PDF_FILES.domandaAmmissione}
-          etichetta={s.moduloEtichetta}
-        />
+        <div className="space-y-6">
+          <DownloadCard
+            titolo={s.statutoTitolo}
+            descrizione={s.statutoDesc}
+            href={PDF_FILES.statuto}
+            etichetta={s.statutoEtichetta}
+          />
+          <DownloadCard
+            titolo={s.moduloTitolo}
+            descrizione={s.moduloDesc}
+            href={PDF_FILES.domandaAmmissione}
+            etichetta={s.moduloEtichetta}
+          />
+        </div>
         <p className="mt-8 rounded-xl bg-grigio-ch p-5 text-grigio">
           <strong className="text-teal-scuro">{s.quotaLabel}</strong> {s.quota}
         </p>

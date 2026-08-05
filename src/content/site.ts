@@ -22,6 +22,7 @@ export const WEB3FORMS = {
 export const PDF_FILES = {
   manifesto: '/docs/manifesto-amakids.pdf',
   domandaAmmissione: '/docs/domanda-ammissione-amakids.pdf',
+  statuto: '/docs/statuto-amakids.pdf',
 } as const
 
 /** Rotte "neutre" (senza prefisso lingua) delle pagine principali. */
