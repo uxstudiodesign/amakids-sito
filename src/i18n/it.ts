@@ -217,9 +217,9 @@ export const it = {
         testo: 'Scarica il modulo di ammissione in PDF e compilalo in ogni sua parte.',
       },
       {
-        titolo: 'Inviala o consegnala',
+        titolo: 'Versa la quota e invia la domanda',
         testo:
-          'Spediscila via email ad amministrazione@amakidsaps.it oppure consegnala in sede, in Via Pisa 7 a Messina.',
+          'Versa la quota associativa di € 20,00 tramite bonifico. Invia la domanda compilata e firmata in PDF ad amministrazione@amakidsaps.it, allegando la ricevuta del bonifico.',
       },
       {
         titolo: 'Il Consiglio Direttivo delibera',
@@ -236,7 +236,11 @@ export const it = {
     statutoEtichetta: 'Scarica il PDF',
     quotaLabel: 'Quota associativa:',
     quota:
-      "la quota annuale è stabilita dal Consiglio Direttivo — contattaci per conoscere l'importo corrente.",
+      "€ 20,00 per l’anno associativo 2026, da versare tramite bonifico.",
+    pagamentoTitolo: 'Coordinate per il bonifico',
+    intestatarioLabel: 'Intestatario',
+    causaleLabel: 'Causale',
+    ricevuta: 'Allega la ricevuta del bonifico alla domanda di ammissione compilata e firmata e invia tutto via email ad amministrazione@amakidsaps.it.',
     cta: 'Chiedici come iscriverti',
   },
   contatti: {

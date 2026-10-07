@@ -4,7 +4,7 @@ import DownloadCard from '../components/DownloadCard'
 import SectionTag from '../components/SectionTag'
 import SepLine from '../components/SepLine'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { PDF_FILES, ROUTES } from '../content/site'
+import { MEMBERSHIP_PAYMENT, PDF_FILES, ROUTES } from '../content/site'
 import { useI18n } from '../i18n'
 
 const ICONE_STEP = [FileDown, Send, ClipboardCheck]
@@ -86,6 +86,16 @@ export default function DiventaSocio() {
         <p className="mt-8 rounded-xl bg-grigio-ch p-5 text-grigio">
           <strong className="text-teal-scuro">{s.quotaLabel}</strong> {s.quota}
         </p>
+        <div className="mt-6 rounded-xl border border-teal-medio/30 p-5 text-grigio">
+          <h3 className="text-xl font-extrabold text-teal-scuro">{s.pagamentoTitolo}</h3>
+          <dl className="mt-4 space-y-3">
+            <div><dt className="font-bold">{s.intestatarioLabel}</dt><dd>{MEMBERSHIP_PAYMENT.accountHolder}</dd></div>
+            <div><dt className="font-bold">IBAN</dt><dd className="break-all font-mono">{MEMBERSHIP_PAYMENT.iban}</dd></div>
+            <div><dt className="font-bold">BIC/SWIFT</dt><dd className="font-mono">{MEMBERSHIP_PAYMENT.bic}</dd></div>
+            <div><dt className="font-bold">{s.causaleLabel}</dt><dd>{MEMBERSHIP_PAYMENT.reference}</dd></div>
+          </dl>
+          <p className="mt-4">{s.ricevuta}</p>
+        </div>
         <div className="mt-8">
           <CTAButton to={`${path(ROUTES.contatti)}?oggetto=iscrizione`}>{s.cta}</CTAButton>
         </div>

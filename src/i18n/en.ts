@@ -219,9 +219,9 @@ export const en: Dictionary = {
         testo: 'Download the membership application PDF (in Italian) and fill it in completely.',
       },
       {
-        titolo: 'Send or hand it in',
+        titolo: 'Pay the fee and email your application',
         testo:
-          'Email it to amministrazione@amakidsaps.it or hand it in at our office, Via Pisa 7, Messina.',
+          'Pay the €20.00 membership fee by bank transfer. Email the completed and signed application PDF to amministrazione@amakidsaps.it, attaching the bank transfer receipt.',
       },
       {
         titolo: 'The Board of Directors decides',
@@ -238,7 +238,11 @@ export const en: Dictionary = {
     statutoEtichetta: 'Download the PDF',
     quotaLabel: 'Membership fee:',
     quota:
-      'the annual fee is set by the Board of Directors — contact us for the current amount.',
+      '€20.00 for the 2026 membership year, payable by bank transfer.',
+    pagamentoTitolo: 'Bank transfer details',
+    intestatarioLabel: 'Account holder',
+    causaleLabel: 'Payment reference (replace Nome e Cognome with your full name)',
+    ricevuta: 'Attach the bank transfer receipt to your completed and signed membership application and email both to amministrazione@amakidsaps.it.',
     cta: 'Ask us how to join',
   },
   contatti: {

@@ -34,3 +34,10 @@ export const ROUTES = {
   contatti: '/contatti',
   privacy: '/privacy',
 } as const
+
+export const MEMBERSHIP_PAYMENT = {
+  accountHolder: 'AMA KIDS APS',
+  iban: 'IT80S0303216500010001256777',
+  bic: 'BACRIT21443',
+  reference: 'Quota associativa 2026 Nome e Cognome',
+} as const
