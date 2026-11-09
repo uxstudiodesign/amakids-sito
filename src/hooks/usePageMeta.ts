@@ -16,7 +16,7 @@ function impostaLinkAlternato(hreflang: string, href: string): void {
 
 /**
  * Imposta title, meta description, lingua del documento e link hreflang
- * della pagina corrente. Sufficiente per una SPA statica senza SSR.
+ * della pagina corrente, coerenti con i metadati HTML prodotti in build.
  */
 export function usePageMeta(title: string, description: string): void {
   const { pathname } = useLocation()
@@ -32,9 +32,22 @@ export function usePageMeta(title: string, description: string): void {
     const locale = localeDaPathname(pathname)
     document.documentElement.lang = locale
 
-    const neutro = percorsoNeutro(pathname)
+    const percorso = pathname.replace(/\/+$/, '') || '/'
+    const neutro = percorsoNeutro(percorso)
     const urlIt = `${SITE.domain}${neutro}`
     const urlEn = `${SITE.domain}${neutro === '/' ? '/en' : `/en${neutro}`}`
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    const url = locale === 'en' ? urlEn : urlIt
+    canonical.href = url
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', url)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
+
     impostaLinkAlternato('it', urlIt)
     impostaLinkAlternato('en', urlEn)
     impostaLinkAlternato('x-default', urlIt)
